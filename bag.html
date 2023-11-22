@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корзина</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="img/5277698.jpg" alt="" class="logo-img" width="75px" />
+        <p class="logo-title">Floristeria</p>
+        <p class="logo-semi-title">Магазин растений</p>
+      </div>
+
+      <nav class="header-menu menu">
+        <div class="menu-btn" onclick="burgerOpen()">
+          <img src="img/burg.png" alt="" id="img-burger" />
+        </div>
+        <div class="menu-list-color">
+          <ul class="menu-list">
+            <li class="menu-it">
+              <a href="index.html" class="menu-list-link">Главная</a>
+            </li>
+            <li class="menu-it">
+              <a href="cat.html" class="menu-list-link">Каталог</a>
+            </li>
+            <li class="menu-it active">Корзина</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="body-bag">
+      <form action="submit_cart.php" method="get" class="form-body">
+        <div class="form-title">ЗАКАЗ</div>
+        <div class="product">
+          <div class="form-label1">Выбранный товар:</div>
+          <input
+            class="form-input"
+            type="text"
+            id="productName"
+            name="productName"
+            placeholder="Выбрать в каталоге"
+            readonly
+          />
+        </div>
+        <div class="coupon">
+          <div class="form-label1">Номер купона:</div>
+          <input
+            class="form-input"
+            type="number"
+            id="couponNumber"
+            name="couponNumber"
+            placeholder="777777"
+          />
+        </div>
+        <div class="present-bag">
+          <div class="form-label1">В подарочной упаковке?</div>
+          <div class="radio-group">
+            <label class="form-label-radio">
+              <input type="radio" name="giftWrap" value="да" /> Да
+            </label>
+            <label class="form-label-radio">
+              <input type="radio" name="giftWrap" value="нет" checked /> Нет
+            </label>
+          </div>
+        </div>
+        <div class="date-delivery">
+          <div class="form-label1">Дата доставки:</div>
+          <input
+            class="form-input2"
+            type="date"
+            id="purchaseDate"
+            name="purchaseDate"
+          />
+        </div>
+        <div class="addres">
+          <div class="form-label1">Ваш адрес и дополнительная информация:</div>
+          <input
+            class="form-input3"
+            type="textarea"
+            id="addres"
+            name="addres"
+            rows="5"
+            placeholder="Москва, ул Пушкина, д Колотушкина"
+          />
+        </div>
+        <input
+          type="hidden"
+          name="shopWish"
+          value="с любовью ваша Floristeria"
+        />
+
+        <button class="form-btn" type="submit">Отправить</button>
+      </form>
+    </div>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const productName = urlParams.get('productName');
+
+      const productNameField = document.getElementById('productName');
+      productNameField.value = productName;
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

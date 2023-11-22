@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="img/5277698.jpg" alt="" class="logo-img" width="75px" />
+        <p class="logo-title">Floristeria</p>
+        <p class="logo-semi-title">Магазин растений</p>
+      </div>
+
+      <nav class="header-menu menu">
+        <div class="menu-btn" onclick="burgerOpen()">
+          <img src="img/burg.png" alt="" id="img-burger" />
+        </div>
+        <div class="menu-list-color">
+          <ul class="menu-list">
+            <li class="menu-it active">Главная</li>
+            <li class="menu-it">
+              <a href="cat.html" class="menu-list-link">Каталог</a>
+            </li>
+
+            <li class="menu-it">
+              <a href="bag.html" class="menu-list-link">Корзина</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="index-body">
+      <div class="body-uslugi">
+        <div class="title1">Добро пожаловать</div>
+        <div class="title2">в магазин "Floristeria"</div>
+        <div class="subtitle">
+          Ваш уникальный магазин, где природа становится частью вашего дома! В
+          "Floristeria" мы предлагаем вам не просто растения, а настоящий опыт,
+          вдохновленный красотой и свежестью зелени.
+        </div>
+        <form class="to-cat" action="cat.html">
+          <button class="btn-to-cat">В каталог</button>
+        </form>
+        <img src="img/plants-vibe.png" alt="" class="big" />
+        <img src="img/plant-vibe2.png" alt="" class="small" />
+        <!-- <button class="btn-down1"></button> -->
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
